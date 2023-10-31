@@ -10,27 +10,27 @@ void main() {
       home: Scaffold(
         backgroundColor: const Color.fromARGB(255, 212, 209, 209),
         appBar: AppBar(
-          title: const Text('DiceD6'),
+          title: const Text('DiceD4'),
           backgroundColor: const Color.fromRGBO(15, 157, 88, 1),
         ),
-        body: DiceD6(),
+        body: DiceD4(),
       ),
     ),
   );
 }
 
-class DiceD6 extends StatefulWidget {
+class DiceD4 extends StatefulWidget {
   @override
   _DiceState createState() => _DiceState();
 }
 
-class _DiceState extends State<DiceD6> {
+class _DiceState extends State<DiceD4> {
   int dice_no = 1;
   void update() {
     setState(() {
       //Random.nextInt(n) returns random integer from 0 to n-1
       dice_no =
-          Random().nextInt(6) + 1; //TODO: add modifier from charactersheets
+          Random().nextInt(4) + 1; //TODO: add modifier from charactersheets
     });
   }
 
